@@ -11,8 +11,4 @@ n = input('До какого числа выводим факториалы? ')
 if not n.isdigit() or int(n) < 0:
     print('Вводите неотрицательные целые числа')
 else:
-    n = int(n)
-    for i, val in enumerate(fact()):
-        print(f'{i}! = {val}')
-        if i == n:
-            break
+    [print(f'{i}! = {val}') for i, val in zip(range(int(n) + 1), fact())]
